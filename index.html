@@ -1,0 +1,140 @@
+<!--Sarah Brennan 2962279-->
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+	
+		<meta charset="utf-8" />		
+		<link rel="stylesheet" href="css/style.css"/>		
+		<title>Quiz!!! - Sarah Brennan 2962279</title>
+		
+	</head>
+	<body>
+		
+		<!--main page div-->
+		<div id="page">
+			<header>
+				<h1>The Best Quiz on General Knowledge</h1>
+				<div id="howToPlay">
+					<h3>How to Play</h3>
+					<p>First, enter your name, and click on Let's Play, this will bring you to the questions. Click on each question number to answer the questions. Click submit once all your questions have been answered and you'll then be given your score out of 5 and the correct answer to any question you might get wrong.</p>
+				</div>
+
+				<h4 id="welcomePlayer"></h4>
+				<div id="playerStart">
+					<input type="text" id="player" placeholder="Enter your name"/>
+				
+					<button id="letsPlay" onclick="quiz()">Let's Play!</button>
+				</div>
+			</header>
+			<!--Links for tabs-->
+			<section id="questions" hidden>
+				<button id="q1" class="questionLinks" onclick="showQuestion(event, 'question1')"> Question 1</button>
+				<button id="q2" class="questionLinks" onclick="showQuestion(event, 'question2')">Question 2</button>
+				<button id="q3" class="questionLinks" onclick="showQuestion(event, 'question3')">Question 3</button>
+				<button id="q4" class="questionLinks" onclick="showQuestion(event, 'question4')">Question 4</button>
+				<button id="q5" class="questionLinks" onclick="showQuestion(event, 'question5')">Question 5</button>
+			</section>
+			<!--Content in tab-->
+			<section id="question1" class="questionData">
+				<span onclick="this.parentElement.style.display='none'" class="close">&times</span>
+				<h3>Q1 - Science</h3>
+				<p>Select 2 answers to be correct: What are the 5th and 79th elements on the periodic table?</p>
+				<img id = "correct1" src="img/correct.png" alt="Picture of a tick" hidden>
+				<img id = "wrong1" src="img/wrong.png" alt="Picture of a wrong mark" hidden>
+				<form name="answers1">
+					<input type="checkbox" name="science" value="o"/>Oxygen<br />
+					<input type="checkbox" name="science" value="b"/>Boron<br />
+					<input type="checkbox" name="science" value="au"/>Gold<br />
+					<input type="checkbox" name="science" value="cl"/>Chlorine<br />
+					<input type="checkbox" name="science" value="y"/>Yttrium<br />
+				</form>
+				<p id="correctAnswer1" hidden>Correct answer is: The 5th element is Boron and the 79th is Gold</p>
+			</section>
+
+			<section id="question2" class="questionData">
+				<span onclick="this.parentElement.style.display='none'" class="close">&times</span>
+				<h3>Q2 - Sport</h3>
+				<p>The term “Googly” is associated with what sport?</p>
+				<img id = "correct2" src="img/correct.png" alt="Picture of a tick" hidden>
+				<img id = "wrong2" src="img/wrong.png" alt="Picture of a wrong mark" hidden>
+				<form name="answers2">
+					<input type="radio" name="sport" value="s"/>1. Soccer<br />
+					<input type="radio" name="sport" value="c"/>2. Cricket<br />
+					<input type="radio" name="sport" value="af"/>3. American Football<br />
+					<input type="radio" name="sport" value="b"/>4. Basketball<br />
+				</form>
+				<p id="correctAnswer2" hidden>Correct answer is: Cricket</p>
+			</section>
+
+			<section id="question3" class="questionData">
+				<span onclick="this.parentElement.style.display='none'" class="close">&times</span>
+				<h3>Q3 - Music</h3>
+				<p>Which musician is often referred to as the fifth Beatle?</p>
+				<img id = "correct3" src="img/correct.png" alt="Picture of a tick" hidden>
+				<img id = "wrong3" src="img/wrong.png" alt="Picture of a wrong mark" hidden>
+				<form name="answers3">
+					<input type="text" id="question3Answer" />
+				</form>
+				<p id="correctAnswer3" hidden>Correct answer is: Pete Best - Pete Best was the drummer for The Beatles from 1960-1962; he was later replaced by Ringo Starr.</p>
+			</section>
+
+			<section id="question4" class="questionData">
+				<span onclick="this.parentElement.style.display='none'" class="close">&times</span>
+				<h3>Q4 - Geography </h3>
+				<p>What major river flows through the Grand Canyon?</p>
+				<img id = "correct4" src="img/correct.png" alt="Picture of a tick" hidden>
+				<img id = "wrong4" src="img/wrong.png" alt="Picture of a wrong mark" hidden>
+				<form name="geography">
+					<select id="answers4">
+						<option value="empty"></option>
+						<option value="a">a. Colorado River</option>
+						<option value="b">b. Mississippi River</option>
+						<option value="c">c. Rio Grande</option>
+						<option value="d">d. Columbia River</option>
+					</select>
+				</form>
+				<p id="correctAnswer4" hidden>Correct answer is: Colorado River</p>
+			</section>
+
+			<section id="question5" class="questionData">
+				<span onclick="this.parentElement.style.display='none'" class="close">&times</span>
+				<h3>Q5 - Movies</h3>
+				<p>Who did George Clooney play in the movie "O Brother, Where Art Thou"?</p>
+				<img id = "correct5" src="img/correct.png" alt="Picture of a tick" hidden>
+				<img id = "wrong5" src="img/wrong.png" alt="Picture of a wrong mark" hidden>
+				<form name="answers5">
+					<input type="radio" name="movies" value=""/>1. Pete Hogwallop<br />
+					<input type="radio" name="movies" value=""/>2. Tommy Johnson<br />
+					<input type="radio" name="movies" value=""/>3. Ulysses Everett McGill<br />
+					<input type="radio" name="movies" value=""/>4. Big Dan Teague<br />
+				</form>
+				<p id="correctAnswer5" hidden>Correct answer is: Ulysses Everett McGill</p>
+			</section>	
+			
+			<section id = "submitClear">
+				<button type="button" id="submitButton" onclick="submit()" hidden>Submit</button>
+				<button type="button" id="refreshButton" onclick="refresh()" hidden>Clear</button>
+			</section>
+
+			<section id = "feedback">
+				<h2 id = "result" ></h2>
+				<img id = "winner" src="img/winner.jpg" alt="Picture of Albert Einstein that says Wow you're a genius" hidden>
+				<img id = "4correct" src="img/4correct.jpg" alt="Picture with you did it written on the inside of a tree" hidden>
+				<img id = "3correct" src="img/3correct.png" alt="Picture of a crown with keep calm you did alright underneath" hidden>
+				<img id = "2correct" src="img/2correct.png" alt="Picture stating you could do better" hidden>
+				<img id = "1correct" src="img/1correct.jpg" alt="Picture of sign saying go back and start again" hidden>
+				<img id = "loser" src="img/loser.jpg" alt="Picture of a tick" hidden>
+			</section>
+			
+			<footer>
+				<!--uses mailto function to create a link to open up users email, on new tab using target="_blank", and create new email with to and subject filled out-->
+				<p class="contact">Quiz by Sarah Brennan: <a href="mailto:sarahhbrennan1989@gmail.com?Subject=Website%20Query" target="_blank">sarahhbrennan1989@gmail.com</a></p>			
+				<p>Student Number: 2962279</p>	
+				<p>&copy; 2018</p>
+			</footer>
+		</div>
+		<!--calls javascript at end-->
+		<script src="js/script.js"></script>		
+	</body>	
+</html>

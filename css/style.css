@@ -1,0 +1,295 @@
+/*Sarah Brennan - 2962279*/
+
+/*body layout for whole page and what's outside the page div*/
+body {
+	/*changes background colour*/
+	background-color: #F1DEDE;
+	color: #F1DEDE;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+/* colours 
+F1DEDE
+BBACC1
+80727B
+909580
+545643*/
+
+/*page layout*/
+#page{	
+	background-color: #80727B;
+	width: 720px;
+	margin: 0 auto;
+	font-family: Tahoma, Helvetica, Arial, Verdana, sans-serif;
+}
+
+/*header*/
+#page header{
+	padding: 40px 40px 20px 40px;
+}
+
+/*h1 in header*/
+#page h1{
+	margin: 0px;	
+	text-align: center;
+	padding-bottom: 30px;
+    font-size: 3em;
+	font-family: "Bookman Old Style", "Times new Roman", Georgia, "Bodoni MT", serif;
+}
+
+#page header #howToPlay{	
+	border: 3px solid #F1DEDE;
+}
+
+/*h3 in header*/
+#page header h3{
+	margin: 0;
+    font-size: 2em;
+	padding-top: 30px;
+	text-align: center;
+	text-decoration: underline;
+	font-family: "Bookman Old Style", "Times new Roman", Georgia, "Bodoni MT", serif;
+}
+
+/*p in header*/
+#page header p{
+	padding: 20px;
+	text-align: justify;
+}
+
+/*h4 in header*/
+#page header h4{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin: 0;
+    font-size: 1.5em;
+	text-align: center;
+	font-family: "Bookman Old Style", "Times new Roman", Georgia, "Bodoni MT", serif;
+}
+
+/**/
+#playerStart{
+	text-align: center;
+}
+
+/*player name text box*/
+#playerStart #player{
+	background-color: #F1DEDE;
+	text-align: center;
+	font-size: 1.5em;
+	margin-right: 40px;
+	border-radius: 10px;
+	padding: 10px 20px;
+}
+
+/*player name text box when selected*/
+#playerStart #player:focus{
+	outline: none;
+}
+
+/*lets play button*/
+#playerStart #letsPlay{
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	font-size: 1.5em;
+	padding: 10px 20px;
+	background-color: #BBACC1;
+	color: #F1DEDE;
+	text-shadow: 0px 2px 4px #708090;
+}
+
+/*lets play button hover*/
+#playerStart #letsPlay:hover{	
+	background-color: #F1DEDE;
+	color: #80727B;
+	text-shadow: 2px 2px 4px #708090;
+}
+
+/*tab layout*/
+#questions {
+	border-top: 3px solid #F1DEDE;
+	border-bottom: 3px solid #F1DEDE;
+    overflow: hidden;
+    background-color: #BBACC1;
+	text-align: center;
+	margin: 0px;
+	padding: 0;
+}
+
+/*buttons style in tab*/
+#questions button {
+	background-color: inherit;
+    border: none;
+	outline: none;
+    cursor: pointer;
+	color: #F1DEDE;
+	padding: 10px 10px;
+	font-size: 1.5em;
+	text-shadow: 2px 2px 4px #708090;
+}
+
+/*tab question buttons hover*/
+#questions button:hover {
+	background-color: #F1DEDE;
+	color: #80727B;
+	text-shadow: 2px 2px 4px #708090;
+}
+
+/*tab question buttons when selected*/
+#questions button:focus {
+	background-color: #F1DEDE;
+	color: #80727B;
+	text-shadow: 2px 2px 4px #708090;
+}
+
+/*close button*/
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+	margin: 
+}
+
+/*close button hover*/
+.close:hover {
+	color: red;
+}
+
+/*tab info*/
+.questionData {
+    display: none;
+	padding: 20px 40px 20px 40px;
+	border-bottom: 3px solid #F1DEDE;
+	height: 250px;
+}
+/*tab h3*/
+.questionData h3{
+	margin: 0;
+	text-align: center;
+    font-size: 2em;
+	font-family: "Bookman Old Style", "Times new Roman", Georgia, "Bodoni MT", serif;
+}
+
+/*images in the answer section*/
+.questionData img{
+	float: right;
+	height: 50px;
+    width: 50px;
+	padding: 40px;
+}
+
+/*change text box of question 3*/
+#question3Answer{	
+	background-color: #F1DEDE;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+/*question 3 text box when selected*/
+#question3Answer:focus{
+	outline: none;
+}
+
+/*change drop down of question 4*/
+#answers4{	
+	background-color: #F1DEDE;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+/*changes correct answer text*/
+#correctAnswer1{
+	color: red;
+	font-size: 1.5em;
+	text-shadow: 2px 2px 10px #000000;
+}
+
+/*changes correct answer text*/
+#correctAnswer2{
+	color: red;	
+	font-size: 1.5em;
+	text-shadow: 2px 2px 10px #000000;
+}
+
+/*changes correct answer text*/
+#correctAnswer3{	
+	color: red;
+	font-size: 1.5em;
+	text-shadow: 2px 2px 10px #000000;
+}
+
+/*changes correct answer text*/
+#correctAnswer4{
+	color: red;	
+	font-size: 1.5em;
+	text-shadow: 2px 2px 10px #000000;
+}
+
+/*changes correct answer text*/
+#correctAnswer5{
+	color: red;	
+	font-size: 1.5em;
+	text-shadow: 2px 2px 10px #000000;
+}
+
+/*submit and clear buttons*/
+#submitClear{
+	clear: both;
+	text-align: center;
+	padding: 20px 40px;
+}
+
+/*submit and clear buttons*/
+#submitClear button{
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	font-size: 1.5em;
+	padding: 10px 20px;
+	background-color: #BBACC1;
+	color: #F1DEDE;
+	text-shadow: 0px 2px 4px #708090;
+}
+
+/*submit and clear buttons hover*/
+#submitClear button:hover{	
+	background-color: #F1DEDE;
+	color: #80727B;
+	text-shadow: 2px 2px 4px #708090;
+}
+
+/*feedback*/
+#feedback{
+	text-align: center;
+	padding-bottom: 40px;
+	font-size: 2em
+}
+
+/*feedback img sizes*/
+#feedback img{
+	width: 25%;
+	height: 25%;
+}
+
+/*changes footer of page*/
+footer{
+	clear: both;
+	border-top: 3px solid #F1DEDE;
+	background-color: #80727B;
+	color: #F1DEDE;
+	text-align: right;
+	padding: 20px 40px;
+}
+
+/*changes links in footer*/
+footer a{
+	text-decoration: none;
+	color: #BBACC1;
+	font-weight: bold;
+}
+
+/*changes links when mouse hovers email*/
+footer a:hover{
+	color: #F1DEDE;
+}
